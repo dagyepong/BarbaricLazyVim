@@ -8,6 +8,16 @@ return {
     opts = {},
   },
   {
+    name = "vintharas/devai.nvim",
+    dir = "~/GitHub/devai.nvim",
+    dev = true,
+    lazy = false,
+    opts = {},
+  },
+  --------------------------------
+  -- disabled plugins
+  --------------------------------
+  {
     name = "vintharas/llm",
     dir = "~/GitHub/llm.nvim",
     dev = true,
@@ -33,4 +43,5 @@ return {
     lazy = false,
     opts = {},
   },
+  --------------------------------
 }

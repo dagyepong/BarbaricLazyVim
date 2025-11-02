@@ -38,3 +38,18 @@ vim.keymap.set("n", "<leader>uF", function()
 end, {
   desc = "Toggle [U]I [F]olding",
 })
+
+-- Commands
+vim.api.nvim_create_user_command("CopyPath", function()
+  -- Get the full, absolute path of the current file
+  local file_path = vim.fn.expand("%:p")
+
+  -- Set the system clipboard register '+' to the file path
+  vim.fn.setreg("+", file_path)
+
+  -- Show a confirmation message
+  vim.notify("Copied path: " .. file_path)
+end, {
+  nargs = 0, -- This command takes no arguments
+  desc = "Copy full path of current file to clipboard",
+})
